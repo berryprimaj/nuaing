@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Filesystem\Filesystem;
 use App\Models\Setting;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Bind 'files' to Filesystem for compatibility with some packages
+        $this->app->bind('files', function ($app) {
+            return new Filesystem;
+        });
     }
 
     /**
