@@ -1,5 +1,7 @@
 {
     "name": "laravel/laravel",
+    "description": "Mikrotik Hotspot Management System Backend",
+    "license": "proprietary",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -10,7 +12,7 @@
     },
     "require": {
         "php": "^8.2",
-        "evilfreelancer/routeros-api-php": "*",
+        "evilfreelancer/routeros-api-php": "^1.5.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
